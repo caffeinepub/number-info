@@ -1,0 +1,92 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 5,
+  "summary": "Build a number information website that fetches and displays data from https://source-code-api.vercel.app/?num={number}.",
+  "architectural_notes": [
+    "Use https://source-code-api.vercel.app/?num={number} as the backend data source for number information."
+  ],
+  "known_issues": [],
+  "isFixRequest": false,
+  "existing_features": [
+    {
+      "id": "feature-create-a-single-page-number-information-website-where-a-user-can-enter-a-number-and-trigger-a-fetch-to-the-api-endpoint-https-source-code-api-vercel-app-num-number",
+      "title": "Create a single-page number information website where a user can enter a number and trigger a fetch to the API endpoint https://source-code-api.vercel.app/?num={number}.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-display-the-api-response-for-the-requested-number-in-a-readable-format-including-clear-loading-and-error-states",
+      "title": "Display the API response for the requested number in a readable format, including clear loading and error states.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-use-react-query-for-api-requests-and-caching-keyed-by-the-input-number-to-avoid-unnecessary-refetches-for-the-same-number",
+      "title": "Use React Query for API requests and caching keyed by the input number to avoid unnecessary refetches for the same number.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-apply-a-coherent-visual-theme-and-layout-for-the-number-information-site-colors-typography-spacing-and-component-styling-and-use-it-consistently-across-the-page",
+      "title": "Apply a coherent visual theme and layout for the number information site (colors, typography, spacing, and component styling) and use it consistently across the page.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-ui-to-use-a-dark-terminal-hacker-inspired-visual-style-across-the-entire-page-backgrounds-cards-inputs-buttons-headers-and-result-panel-including-terminal-like-typography-monospace-for-key-areas-and-high-contrast-accents-while-keeping-all-user-facing-text-in-english",
+      "title": "Update the UI to use a dark, terminal/hacker-inspired visual style across the entire page (backgrounds, cards, inputs, buttons, headers, and result panel), including terminal-like typography (monospace for key areas) and high-contrast accents, while keeping all user-facing text in English.",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-theme-toggle-control-dark-light-that-switches-the-app-between-dark-and-light-modes-by-applying-removing-the-global-dark-mode-class-and-persist-the-user-s-choice-locally-so-it-is-restored-on-page-reload",
+      "title": "Add a theme toggle control (Dark/Light) that switches the app between dark and light modes by applying/removing the global dark-mode class, and persist the user’s choice locally so it is restored on page reload.",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-an-on-page-search-history-of-previously-submitted-numbers-that-allows-quick-re-running-a-past-search-persist-this-history-locally-cap-the-list-length-and-provide-a-clear-history-action",
+      "title": "Add an on-page search history of previously submitted numbers that allows quick re-running a past search; persist this history locally, cap the list length, and provide a clear-history action.",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Create a number information website that uses the API endpoint https://source-code-api.vercel.app/?num={number} to fetch and display number details.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Add a dark theme and update the UI styling to have a \"hacker\" feel (e.g., terminal-like typography/colors).",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Add a history of previously searched numbers on the page for quick access/repeat searches.",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Number Info",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

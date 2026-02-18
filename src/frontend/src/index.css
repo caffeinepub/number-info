@@ -1,0 +1,148 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --radius: 0.5rem;
+        
+        /* Light mode: Clean, minimal */
+        --background: 0.98 0.01 60;
+        --foreground: 0.15 0.02 40;
+        
+        --card: 0.99 0 0;
+        --card-foreground: 0.15 0.02 40;
+        
+        --popover: 1 0 0;
+        --popover-foreground: 0.15 0.02 40;
+        
+        /* Primary: Bright cyan/green for hacker aesthetic */
+        --primary: 0.65 0.20 160;
+        --primary-foreground: 0.98 0.01 60;
+        
+        /* Secondary: Cool gray */
+        --secondary: 0.92 0.01 200;
+        --secondary-foreground: 0.25 0.03 200;
+        
+        /* Muted: Light cool gray */
+        --muted: 0.95 0.01 200;
+        --muted-foreground: 0.50 0.02 200;
+        
+        /* Accent: Bright highlight */
+        --accent: 0.90 0.03 180;
+        --accent-foreground: 0.25 0.03 180;
+        
+        /* Destructive: Bright red */
+        --destructive: 0.55 0.22 25;
+        --destructive-foreground: 0.98 0.01 60;
+        
+        /* Borders and inputs */
+        --border: 0.88 0.01 200;
+        --input: 0.88 0.01 200;
+        --ring: 0.65 0.20 160;
+        
+        /* Chart colors */
+        --chart-1: 0.65 0.20 160;
+        --chart-2: 0.70 0.15 140;
+        --chart-3: 0.55 0.18 180;
+        --chart-4: 0.75 0.12 200;
+        --chart-5: 0.60 0.16 150;
+    }
+
+    .dark {
+        /* Dark mode: Terminal/hacker aesthetic with cyan/green accents */
+        --background: 0.08 0.01 200;
+        --foreground: 0.92 0.02 160;
+        
+        --card: 0.12 0.02 200;
+        --card-foreground: 0.92 0.02 160;
+        
+        --popover: 0.10 0.02 200;
+        --popover-foreground: 0.92 0.02 160;
+        
+        /* Primary: Bright cyan/green terminal color */
+        --primary: 0.75 0.18 160;
+        --primary-foreground: 0.08 0.01 200;
+        
+        /* Secondary: Dark cool gray */
+        --secondary: 0.20 0.02 200;
+        --secondary-foreground: 0.92 0.02 160;
+        
+        /* Muted: Medium dark gray */
+        --muted: 0.18 0.02 200;
+        --muted-foreground: 0.60 0.03 180;
+        
+        /* Accent: Slightly lighter than card */
+        --accent: 0.22 0.03 180;
+        --accent-foreground: 0.92 0.02 160;
+        
+        /* Destructive: Bright red for errors */
+        --destructive: 0.60 0.25 25;
+        --destructive-foreground: 0.95 0.01 160;
+        
+        /* Borders and inputs - subtle cyan tint */
+        --border: 0.22 0.03 180;
+        --input: 0.24 0.03 180;
+        --ring: 0.70 0.16 160;
+        
+        /* Chart colors - vibrant terminal colors */
+        --chart-1: 0.70 0.20 160;
+        --chart-2: 0.75 0.15 140;
+        --chart-3: 0.60 0.18 180;
+        --chart-4: 0.80 0.12 200;
+        --chart-5: 0.65 0.16 150;
+    }
+
+    * {
+        @apply border-border;
+    }
+    
+    body {
+        @apply bg-background text-foreground;
+        font-feature-settings: "rlig" 1, "calt" 1;
+    }
+}
+
+@layer components {
+    /* Terminal-style card with subtle glow */
+    .terminal-card {
+        border-color: oklch(var(--primary) / 0.2);
+        background-color: oklch(var(--card) / 0.8);
+        backdrop-filter: blur(8px);
+        position: relative;
+    }
+    
+    .dark .terminal-card::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        border-radius: inherit;
+        padding: 1px;
+        background: linear-gradient(135deg, oklch(var(--primary) / 0.3), transparent 50%, oklch(var(--primary) / 0.1));
+        -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
+        pointer-events: none;
+        opacity: 0.5;
+    }
+    
+    /* Terminal output styling */
+    .terminal-output {
+        position: relative;
+    }
+    
+    .dark .terminal-output::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: repeating-linear-gradient(
+            0deg,
+            oklch(var(--primary) / 0.03) 0px,
+            transparent 1px,
+            transparent 2px,
+            oklch(var(--primary) / 0.03) 3px
+        );
+        pointer-events: none;
+        border-radius: inherit;
+    }
+}

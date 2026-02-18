@@ -1,0 +1,22 @@
+{
+  "backend/main.mo": "Empty Motoko actor with no methods or logic.",
+  "feature_evidence.json": "JSON report listing implemented features, associated files, components, and test IDs with high-confidence metadata.",
+  "frontend-file-summaries.txt": "Reference file containing human-written summaries of each frontend source file for build planning.",
+  "frontend/index.css": "Tailwind base stylesheet defining CSS variables for light and dark themes and applying global background and text colors.",
+  "frontend/index.html": "Basic HTML entry point that mounts the React app and loads main.tsx.",
+  "frontend/src/App.tsx": "Main app component composing the number form, results, history, and theme toggle within a themed layout using React Query.",
+  "frontend/src/components/NumberInfoForm.tsx": "Form component for entering numbers with validation, monospace styling, and loading-aware submit behavior.",
+  "frontend/src/components/NumberInfoResult.tsx": "Displays number info with loading, error, empty, and result states styled like a terminal output panel.",
+  "frontend/src/components/NumberSearchHistory.tsx": "Scrollable search‑history card listing recent numbers with click‑to‑rerun and clear‑history actions.",
+  "frontend/src/components/ThemeToggle.tsx": "Icon button that toggles between dark and light themes using the useTheme hook.",
+  "frontend/src/hooks/useActor.ts": "React hook that creates and caches a backend actor, updating it when the user identity changes and invalidating dependent queries.",
+  "frontend/src/hooks/useInternetIdentity.ts": "Provides a React context and provider for managing Internet Identity authentication, including login state, identity loading, and AuthClient setup.",
+  "frontend/src/hooks/useQueries.ts": "Defines a React Query hook that fetches number information using the provided number as the query key.",
+  "frontend/src/hooks/useSearchHistory.ts": "Manages a persisted search history in localStorage with add and clear operations, capped to 15 entries.",
+  "frontend/src/hooks/useTheme.ts": "Handles dark/light theme toggling, syncing the selection to localStorage and applying classes to the document root.",
+  "frontend/src/index.css": "Defines Tailwind base styles and custom CSS variables for light and dark themes, plus terminal-style component classes.",
+  "frontend/src/lib/numberInfoApi.ts": "Implements a wrapper for fetching number information from an external API with basic validation and error handling.",
+  "frontend/src/main.tsx": "Bootstraps the React app, configuring React Query and wrapping the app with the InternetIdentityProvider.",
+  "frontend/tailwind.config.js": "Configures Tailwind with custom colors, fonts, animations, and plugins reflecting the app's themed design.",
+  "project_state.json": "Describes the project’s state, features, requirements, and architecture for the number information website."
+}

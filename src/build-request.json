@@ -1,0 +1,83 @@
+{
+  "kind": "build_request",
+  "title": "Add dark hacker-style theme and searched-number history",
+  "projectName": "Number Info",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-5",
+      "text": "Update the UI to use a dark, terminal/hacker-inspired visual style across the entire page (backgrounds, cards, inputs, buttons, headers, and result panel), including terminal-like typography (monospace for key areas) and high-contrast accents, while keeping all user-facing text in English.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-4"
+        ],
+        "quotes": [
+          "Update karo dark theme and add history hacker feeling"
+        ]
+      },
+      "acceptanceCriteria": [
+        "The app renders with a clearly dark appearance (no light background dominance) across header, main content, and footer.",
+        "The result JSON area visually reads like a terminal output (e.g., monospace font, appropriate contrast, and terminal-like container styling).",
+        "No user-facing UI strings are introduced in a non-English language.",
+        "Styling changes are applied consistently across existing components (form, result, header/footer) without breaking layout or responsiveness."
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "text": "Add a theme toggle control (Dark/Light) that switches the app between dark and light modes by applying/removing the global dark-mode class, and persist the user’s choice locally so it is restored on page reload.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-4"
+        ],
+        "quotes": [
+          "Update karo dark theme and add history hacker feeling"
+        ]
+      },
+      "acceptanceCriteria": [
+        "A visible UI control exists to toggle between Dark and Light themes.",
+        "Toggling the control immediately updates the app’s colors (background, text, card surfaces, borders).",
+        "The selected theme is saved locally and restored after a full page reload.",
+        "Default behavior is sensible: if no prior preference exists, the app loads in Dark mode."
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "text": "Add an on-page search history of previously submitted numbers that allows quick re-running a past search; persist this history locally, cap the list length, and provide a clear-history action.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-4"
+        ],
+        "quotes": [
+          "Update karo dark theme and add history hacker feeling"
+        ]
+      },
+      "acceptanceCriteria": [
+        "After submitting a number, it appears in a visible history list on the page.",
+        "Clicking a history item triggers fetching and displaying results for that number (reusing the existing React Query flow).",
+        "History persists across page reloads using local storage.",
+        "History list is capped (e.g., last 10–20 items) and avoids duplicate entries by moving an existing number to the top when re-searched.",
+        "A clear-history control removes all stored history and updates the UI immediately."
+      ]
+    }
+  ],
+  "constraints": [
+    "Do not edit files under frontend/src/components/ui (compose existing shadcn components instead).",
+    "Do not modify any paths listed in frontend.immutablePaths.",
+    "Keep backend as a single Motoko actor; no backend changes are required for theme/history (use local persistence on the frontend).",
+    "Continue using the existing API endpoint format: https://source-code-api.vercel.app/?num={number}.",
+    "All user-facing text must be English."
+  ],
+  "nonGoals": [
+    "Adding backend persistence for search history across devices/users.",
+    "Adding real-time features or WebSocket updates.",
+    "Adding third-party authentication providers beyond Internet Identity.",
+    "Changing the external API behavior or adding new external data sources."
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  }
+}

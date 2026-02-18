@@ -1,0 +1,67 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-update-the-ui-to-use-a-dark-terminal-hacker-inspired-visual-style-across-the-entire-page-backgrounds-cards-inputs-buttons-headers-and-result-panel-including-terminal-like-typography-monospace-for-key-areas-and-high-contrast-accents-while-keeping-all-user-facing-text-in-english",
+      "featureTitle": "Update the UI to use a dark, terminal/hacker-inspired visual style across the entire page (backgrounds, cards, inputs, buttons, headers, and result panel), including terminal-like typography (monospace for key areas) and high-contrast accents, while keeping all user-facing text in English.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/NumberInfoForm.tsx",
+        "frontend/src/components/NumberInfoResult.tsx",
+        "frontend/src/index.css",
+        "frontend/tailwind.config.js"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-5"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-a-theme-toggle-control-dark-light-that-switches-the-app-between-dark-and-light-modes-by-applying-removing-the-global-dark-mode-class-and-persist-the-user-s-choice-locally-so-it-is-restored-on-page-reload",
+      "featureTitle": "Add a theme toggle control (Dark/Light) that switches the app between dark and light modes by applying/removing the global dark-mode class, and persist the user’s choice locally so it is restored on page reload.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/ThemeToggle.tsx",
+        "frontend/src/hooks/useTheme.ts"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-6"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-an-on-page-search-history-of-previously-submitted-numbers-that-allows-quick-re-running-a-past-search-persist-this-history-locally-cap-the-list-length-and-provide-a-clear-history-action",
+      "featureTitle": "Add an on-page search history of previously submitted numbers that allows quick re-running a past search; persist this history locally, cap the list length, and provide a clear-history action.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/NumberSearchHistory.tsx",
+        "frontend/src/hooks/useSearchHistory.ts"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-7"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

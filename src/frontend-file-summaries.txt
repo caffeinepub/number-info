@@ -1,0 +1,14 @@
+{
+  "frontend/src/App.tsx": "Main application component that orchestrates the number info form, result display, search history, and theme toggle with a dark hacker-themed layout including header with Terminal icon and footer with proper attribution.",
+  "frontend/src/components/NumberInfoForm.tsx": "Form component for number input with hacker-themed styling using monospace fonts, terminal-style prompts, and cyan/green accent colors while maintaining validation and loading states.",
+  "frontend/src/components/NumberInfoResult.tsx": "Result display component with terminal-style output panel featuring monospace fonts, scanline effects, and hacker aesthetic for JSON response display with refresh functionality.",
+  "frontend/src/hooks/useQueries.ts": "React Query hook that manages fetching number information from the external API with caching and error handling.",
+  "frontend/src/lib/numberInfoApi.ts": "API client utility that constructs the request URL and handles fetch operations with proper error messages.",
+  "frontend/src/index.css": "Global styles with dark hacker-themed OKLCH color palette featuring cyan/green terminal colors, subtle glow effects, scanline patterns, and terminal-card styling using direct CSS properties instead of @apply with opacity modifiers for build compatibility.",
+  "frontend/tailwind.config.js": "Tailwind configuration with extended theme tokens including monospace font family stack for terminal-style typography and consistent design system.",
+  "frontend/src/components/ThemeToggle.tsx": "Theme toggle button component that switches between dark and light modes using sun/moon icons and persists preference via the useTheme hook.",
+  "frontend/src/components/NumberSearchHistory.tsx": "Search history panel component that displays recent number queries in a terminal-style list with click-to-rerun and clear-all functionality using local storage persistence.",
+  "frontend/src/hooks/useTheme.ts": "Custom hook that manages theme state (dark/light), applies the theme class to document root, defaults to dark mode, and persists user preference in local storage.",
+  "frontend/src/hooks/useSearchHistory.ts": "Custom hook that manages search history with local storage persistence, caps list at 15 items, de-duplicates entries by moving existing numbers to top, and provides clear-all functionality.",
+  "frontend/src/main.tsx": "Application entry point that applies saved theme immediately on load to prevent flash, wraps app with QueryClientProvider and InternetIdentityProvider."
+}
